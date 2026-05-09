@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+/* Priority Buttons */
+.priorityBtn {
+  background: #eee;
+  border: none;
+}
+
+.active {
+  background: var(--lp-blue);
+  color: white;
+}
+
+/* Upload Box */
+.uploadBox {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  border-radius: 10px;
+  color: gray;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.uploadBox:hover {
+  border-color: var(--lp-blue);
+  color: var(--lp-blue);
+}
+
+/* Custom Button */
+.submitBtn {
+  background-color: var(--lp-blue);
+  border: none;
+}
+
+.submitBtn:hover {
+  background-color: #162d6a;
+}
+
+.input {
+  background-color: #e1e3e4; 
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.input::placeholder {
+  color: #9ca3af; 
+}
+.input:focus {
+  background-color: #fff;
+  border-color: #e1e3e4;
+  box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.2);
+}

@@ -1,0 +1,55 @@
+.nav {
+    gap: 4rem;
+}
+.searchBox {
+  position: relative;
+  width: 30%;
+}
+
+.searchBox i {
+  position: absolute;
+  left: 10px;
+  top: 30%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+.searchBox input {
+  width: 100%;
+  padding: 8px 10px 8px 35px; 
+  border-radius: 20px;
+}
+
+.notif {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+  padding: 10px;
+}
+
+.notif i {
+  color: var(--lp-blue);
+  font-size: 20px;
+}
+
+.ques {
+  background-color: var(--lp-blue);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.img {
+    width: 20%;
+    height: 40%;
+    border-radius: 20px;
+}
+
+.user {
+      border-left: 1px solid var(--lp-border);
+}

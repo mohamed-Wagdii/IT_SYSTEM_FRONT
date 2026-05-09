@@ -1,5 +1,6 @@
 // src/components/auth/LoginForm.jsx
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import useAuthForm from '../../hooks/useAuthForm';
 import { validateLogin } from '../../utils/validators';
 
@@ -11,7 +12,7 @@ const INITIAL = {
 };
 
 const LoginForm = () => {
-  const navigate = useNavigate();
+  const { login } = useAuth();
   const {
     values,
     errors,
@@ -52,9 +53,7 @@ const LoginForm = () => {
         );
       }
 
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
-      navigate(actualRole === 'admin' ? '/dashboard/admin' : '/dashboard');
+      login(data.user, data.token);
     } catch (err) {
       setServerError(err.message || 'Invalid credentials. Please try again.');
     } finally {

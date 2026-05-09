@@ -50,13 +50,6 @@ function Dashboard() {
             Role: {user?.role} &nbsp;·&nbsp; Here is the current status of your open requests.
           </p>
         </div>
-        <button
-          className="btn fw-semibold"
-          style={{ background: "#1a3a6b", color: "#fff", borderRadius: "8px", padding: "8px 20px", fontSize: "13px", border: "none" }}
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
       </div>
 
       <StatsCards stats={stats} />

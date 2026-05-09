@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = ({ user = "Alex" }) => {
+const Navbar = ({ user = "User" }) => {
   return (
     <nav
       className="d-flex align-items-center justify-content-between px-4 py-2"
@@ -16,39 +16,24 @@ const Navbar = ({ user = "Alex" }) => {
         boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
       }}
     >
-      {/* Left: App Name */}
-      <span
-        className="fw-semibold"
-        style={{ color: "#1e293b", fontSize: "15px", letterSpacing: "0.3px" }}
-      >
+      <span className="fw-semibold" style={{ color: "#1e293b", fontSize: "15px", letterSpacing: "0.3px" }}>
         Architect IT
       </span>
 
-      {/* Center: Search */}
       <div className="d-flex align-items-center" style={{ flex: 1, maxWidth: "400px", margin: "0 40px" }}>
         <div className="input-group" style={{ borderRadius: "10px", overflow: "hidden" }}>
-          <span
-            className="input-group-text border-0"
-            style={{ background: "#f1f5f9", color: "#94a3b8" }}
-          >
+          <span className="input-group-text border-0" style={{ background: "#f1f5f9", color: "#94a3b8" }}>
             <i className="bi bi-search"></i>
           </span>
           <input
             type="text"
             className="form-control border-0"
             placeholder="Search tickets, assets..."
-            style={{
-              background: "#f1f5f9",
-              fontSize: "13px",
-              color: "#475569",
-              outline: "none",
-              boxShadow: "none",
-            }}
+            style={{ background: "#f1f5f9", fontSize: "13px", color: "#475569", boxShadow: "none" }}
           />
         </div>
       </div>
 
-      {/* Right: Icons + Avatar */}
       <div className="d-flex align-items-center gap-3">
         <button className="btn p-0 position-relative" style={{ color: "#64748b", fontSize: "18px" }}>
           <i className="bi bi-bell"></i>
@@ -58,10 +43,6 @@ const Navbar = ({ user = "Alex" }) => {
           >
             3
           </span>
-        </button>
-
-        <button className="btn p-0" style={{ color: "#64748b", fontSize: "18px" }}>
-          <i className="bi bi-question-circle"></i>
         </button>
 
         <div
@@ -74,7 +55,7 @@ const Navbar = ({ user = "Alex" }) => {
             cursor: "pointer",
           }}
         >
-          {user.charAt(0)}
+          {user.charAt(0).toUpperCase()}
         </div>
       </div>
     </nav>

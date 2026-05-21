@@ -6,7 +6,7 @@ const mockStats = {
   activeTickets: 3,
   resolvedTickets: 12,
 };
-
+    
 const StatsCards = ({ stats = mockStats }) => {
   return (
     <div className="row g-3 mb-4">
